@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javasimplee;
+import java.util.Map;
+import java.util.TreeMap;
+
+/**
+ *
+ * @author Ramazan
+ */
+public class SortedMaps {
+    public static void main(String[] args) {
+       
+        Map<Integer, String> treeMap = new TreeMap<Integer, String>();
+        
+        testMap(treeMap);        
+       
+    }
+    
+    public static void testMap(Map<Integer, String> map) {
+        map.put(6, "Ankara");
+        map.put(71, "Kirikkale");
+        map.put(18, "Cankiri");
+        map.put(66, "Yozgat");
+        map.put(34, "Istanbul");
+        map.put(35, "Izmır");
+        map.put(19, "Corum");
+        map.put(7, "Antalya");
+        
+        for(Integer key: map.keySet()) {
+            String value = map.get(key);            
+            System.out.println(key + ": " + value);
+            
+        }      
+       System.out.println("-------------------");
+    }
+        
+    
+}
+

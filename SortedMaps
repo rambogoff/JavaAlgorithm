@@ -35,7 +35,7 @@ public class SortedMaps {
             System.out.println(key + ": " + value);
             
         }      
-       System.out.println("-------------------");
+       
     }
         
     
@@ -50,5 +50,5 @@ run:
 35: Izmır
 66: Yozgat
 71: Kirikkale
--------------------
+
 */

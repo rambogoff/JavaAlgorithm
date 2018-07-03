@@ -1,0 +1,53 @@
+
+package javasimplee;
+
+import java.util.LinkedList;
+
+/*
+LinkedListler, bir veri alır aynı zamanda bir pointer’ı bulunur. 
+Bu pointer bir sonraki elemanı gösterir. Listedeki elemanlar 
+bu pointerler ile birbirine bağlıdır, yani bunlara bağlı liste diyebiliriz.
+
+*/
+public class linklist {
+    public static void main(String args[])
+    {
+        
+        LinkedList<String> object = new LinkedList<String>();
+ 
+        object.add("Ankara");
+        object.add("Bursa");
+        object.addLast("Canakkale");
+        object.addFirst("Denizli");
+        object.add(2, "Edirne");
+        object.add("Kirikkale");        
+        System.out.println("Linkedlist : " + object);
+ 
+        
+        object.remove("Bursa");
+        object.remove(3);
+        object.removeFirst();
+        object.removeLast();
+        System.out.println("Linkedlist : " + object);
+ 
+        // Elemanı bulma
+        boolean status = object.contains("Edirne");
+ 
+        if(status)
+            System.out.println("Listede 'Edirne' bulundu ");
+        else
+            System.out.println("Listede  'Edirne' bulunamadı"); 
+        
+        int size = object.size();
+        System.out.println("Linkedlist size = " + size); 
+        
+        
+        Object element = object.get(0);
+        System.out.println("0.ncı index : " + element);
+        object.set(1, "Cankiri");        
+        System.out.println("Linkedlist değişimden sonra: " + object);
+       
+        
+       
+    }
+}

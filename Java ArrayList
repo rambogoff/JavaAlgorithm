@@ -1,0 +1,40 @@
+package javasimplee;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Arraylist {
+    public static void main(String [] args){
+        ArrayList<String> vari = new ArrayList<String>();
+        // index number start from 0
+        vari.add("Ankara");
+        vari.add("Kirikkale");
+        vari.add("Yozgat");
+        vari.add("Cankiri");
+        System.out.println(vari);
+        System.out.println("----------------------");
+        
+        System.out.println(vari.get(0));// we call the first element
+        System.out.println(vari.get(3));
+        System.out.println(vari.get(2));
+        System.out.println(vari.get(1));
+        System.out.println("----------------------");
+        
+        for(int i = 0; i < vari.size(); i++){
+            System.out.println(vari.get(i));
+        }
+        System.out.println("------------------");
+        for(String a : vari){
+            System.out.println(a);
+        }
+        System.out.println("------------------");
+        Collections.sort(vari); //sort arraylisti sıralamaya yarar
+        System.out.println("Character order"+vari);
+        System.out.println("------------------");
+        vari.remove(2); // index numarasına göre silme işlemi yapacak
+        System.out.println(vari);
+        System.out.println("------------------");
+        vari.clear(); //Clear Arraylistteki tüm elemanları siler.
+        System.out.println(vari);
+    }
+    
+}

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Linkedlist {
+public class LinkedlistandArraylist {
       public static void main(String[] args) {
         /*
          * ArrayLists dizileri yönetir

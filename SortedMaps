@@ -40,4 +40,15 @@ public class SortedMaps {
         
     
 }
-
+/* Ekran çıktısı
+run:
+6: Ankara
+7: Antalya
+18: Cankiri
+19: Corum
+34: Istanbul
+35: Izmır
+66: Yozgat
+71: Kirikkale
+-------------------
+*/

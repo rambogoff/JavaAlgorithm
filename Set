@@ -1,0 +1,53 @@
+
+package javasimplee;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+/**
+ *@author Ramazan
+ * Set, verilen verileri bir dizin (index) kullanmadan saklamaktadır. 
+ * Aynı zamanda Set'ler aynı elemanı iki kere saklamaya izin vermezler.
+ */
+public class Sett {
+    public static void main(String[] args) {
+
+        Set<String> set1 = new TreeSet<String>();
+
+        if (set1.isEmpty()) {
+            System.out.println("Set1 bos");
+        }
+
+        set1.add("Adana");
+        set1.add("Kirikkale");
+        set1.add("Mersin");
+        set1.add("Mus");
+        set1.add("Adana");
+        set1.add("Ankara");
+        set1.add("Mus");
+
+        System.out.println(set1);
+        
+        if (set1.contains("Mus")) { // dizi içindemi kotrol eder
+            System.out.println("Mus kelimesi içerir");
+        }
+
+        if (set1.contains("Anamur")) {
+            System.out.println("Anamur kelimesi içermez");
+        }
+        int size = set1.size();
+        System.out.println(size);
+        set1.remove("Mus");
+        set1.remove("Adana");
+        System.out.println(set1);
+    }
+
+}
+
+/* #Output#
+Set1 bos
+[Adana, Ankara, Kirikkale, Mersin, Mus]
+Mus kelimesi içerir
+5
+[Ankara, Kirikkale, Mersin]
+*/

@@ -1,0 +1,39 @@
+package query;
+import java.util.Scanner;
+
+public class Task1 {
+	 public static void main(String[] args) {
+	 
+		 int sayi, i, k, bosluk, yildiz;
+			Scanner scan = new Scanner(System.in);
+			
+			System.out.print("Yilbasi agaciniz kac yıldız satırı olsun ?: ");
+			sayi = scan.nextInt();
+			yildiz = 1;
+			bosluk = sayi-1;
+			for(i=0;i<sayi;i++)
+			{
+				for(k=0; k < bosluk; k++)
+				{
+					System.out.print(' ');
+				}					
+				
+				for(k=0;k<=yildiz;k++)
+				{
+					if ( k==0 ) {
+						System.out.print("*");
+						}
+					else if ( k==yildiz -1) {
+						System.out.print("*");
+						}
+					else
+						System.out.print(" ");
+					
+				}
+				System.out.println();
+				bosluk--;
+				yildiz+=2;
+			}
+		}
+	}
+

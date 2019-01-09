@@ -1,0 +1,95 @@
+package query;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Task2 {
+
+    static HashMap<String, Integer> numara= new HashMap<String, Integer>();   
+    static HashMap<String, Integer> tnumara= new HashMap<String, Integer>();
+    static HashMap<String, Integer> onumara= new HashMap<String, Integer>();
+
+    static {
+    	numara.put("sıfır", 0);
+    	numara.put("bir", 1);
+    	numara.put("iki", 2);
+    	numara.put("üç", 3);
+    	numara.put("dört", 4);
+    	numara.put("beş", 5);
+    	numara.put("altı", 6);
+    	numara.put("yedi", 7);
+    	numara.put("sekiz", 8);
+    	numara.put("dokuz", 9);        
+      
+        tnumara.put("on", 10);
+        tnumara.put("yirmi", 20);
+        tnumara.put("otuz", 30);
+        tnumara.put("kırk", 40);
+        tnumara.put("elli", 50);
+        tnumara.put("altmış", 60);
+        tnumara.put("yetmiş", 70);
+        tnumara.put("seksen", 80);
+        tnumara.put("doksan", 90);
+
+        onumara.put("yüz", 100);
+        onumara.put("bin", 1000);
+        onumara.put("milyon", 1000000);
+        onumara.put("milyar", 1000000000);        
+    }
+
+    public static void main(String args[]){
+    	
+        String input1 = "elli beş milyon yirmi üç bin doksan";
+        String input2 = "bir milyar elli altı milyon  yetmiş beş bin doksan dokuz ";
+        String input3 = "elli dört bin iki yüz altmış beş";
+        
+
+        KelimeToSayi(input1);
+        KelimeToSayi(input2);
+        KelimeToSayi(input3);
+        
+
+
+    }
+
+    private static void KelimeToSayi(String input) {
+        System.out.println("Verilen String = "+input);
+        long toplam = 0;
+        Integer temp = null;
+        Integer p = 0;
+        String [] sKelime = input.toLowerCase().split(" ");
+
+
+        for(String kelime:sKelime ){
+
+            if( numara.get(kelime)!= null){
+                temp= numara.get(kelime);
+
+                 toplam+= temp;
+
+                p+= temp;
+            }
+            else if(onumara.get(kelime)!= null){
+                if( toplam  !=0){
+                     toplam-= p;
+                }
+                 toplam  = toplam  +(long)p*(long)onumara.get(kelime);
+                temp=null;
+                p=0;
+
+
+            }
+            else if(tnumara.get(kelime)!=null){
+                temp=tnumara.get(kelime);
+                 toplam+= temp;
+
+                p=temp;
+            }
+
+        }
+
+        System.out.println( toplam  );
+    }
+
+}
